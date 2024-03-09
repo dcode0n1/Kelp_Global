@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="file" accept=".csv" id="fileInput" name="csv">
+        <button onclick="upload(event)">Upload</button>
+    </form>
+    <script>
+        const upload = async (event) => {
+            event.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const selectedFile = fileInput.files[0];
+            if (selectedFile) {
+                const formData = new FormData();
+                formData.append('file', selectedFile);
+                try {
+                    let response = await fetch('http://localhost:3000/api/upload-csv', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (response.ok) {
+                        let data = await response.json();
+                        console.log(data);
+                    } else {
+                        console.error('Upload failed:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error during upload:', error);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

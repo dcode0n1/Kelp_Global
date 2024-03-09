@@ -1,0 +1,44 @@
+[
+    {
+        "name": {
+            "firstName": "Rohit",
+            "lastName": "Prasad"
+        },
+        "age": "35",
+        "address": {
+            "line1": "A-563 Rakshak Society",
+            "line2": "New Pune Road",
+            "city": "Pune",
+            "state": "Maharashtra"
+        },
+        "gender": "male"
+    },
+    {
+        "name": {
+            "firstName": "Jane",
+            "lastName": "Smith"
+        },
+        "age": "40",
+        "address": {
+            "line1": "456 Oak St",
+            "line2": "Suite 200",
+            "city": "Los Angeles",
+            "state": "CA"
+        },
+        "gender": "female"
+    },
+    {
+        "name": {
+            "firstName": "Alice",
+            "lastName": "Johnson"
+        },
+        "age": "55",
+        "address": {
+            "line1": "789 Maple St",
+            "line2": "-",
+            "city": "Chicago",
+            "state": "IL"
+        },
+        "gender": "female"
+    }
+]
